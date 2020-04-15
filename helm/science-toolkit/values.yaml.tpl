@@ -92,3 +92,6 @@ mlflow:
     size: 10Gi
   s3: 
     bucket: mlflow-artifacts
+
+certManager:
+  enable: false
