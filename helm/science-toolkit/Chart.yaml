@@ -7,3 +7,6 @@ dependencies:
   - name: minio
     version: "2.5.16"
     repository: "@stable"
+  - name: certManager
+    version: "0.14.2"
+    repository: "jetstack/cert-manager"

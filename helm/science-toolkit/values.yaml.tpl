@@ -94,4 +94,4 @@ mlflow:
     bucket: mlflow-artifacts
 
 certManager:
-  enable: false
+  enabled: false

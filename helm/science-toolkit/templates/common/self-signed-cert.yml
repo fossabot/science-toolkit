@@ -1,4 +1,4 @@
-{{ if .Values.certManager.enable }}
+{{ if .Values.certManager.enabled }}
 # Certificate Issuer (CA)
 apiVersion: cert-manager.io/v1alpha2
 kind: Issuer
@@ -16,9 +16,9 @@ metadata:
 spec:
   secretName: {{ .Release.Name }}-app-tls-secret
   dnsNames:
-    - my-app.dev.local
+    - {{ .Values.domain }}
   issuerRef:
-    name: {{ .Release.Name }}-tsl-ca-issuer
+    name: {{ .Release.Name }}-tls-ca-issuer
     # Alternative: ClusterIssuer if there is a cluster-wide issuer available
     kind: Issuer
 {{ end }}
